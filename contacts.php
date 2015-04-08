@@ -3,7 +3,7 @@
 	// FIRST: 
 	// Instead of test@test.com put the email address of the mailing list
 
-	$emailTo = 'test@test.com';
+	$emailTo = 'john.reddex@gmail.com,rysso08@gmail.com';
 	$contactSubject = 'Contact form';
 
 	// SECOND:
