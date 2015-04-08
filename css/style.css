@@ -1428,3 +1428,14 @@ nav a:first-child {
   height:70px;
   overflow: hidden;
 }
+.reasons{
+  margin: 75px 0 64px;
+}
+.reason{
+  font-size: 18pt;
+  line-height: 22pt;
+  font-family: "PT Sans Narrow";
+}
+.l-numb{
+  font-size: 40pt;
+}
