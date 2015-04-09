@@ -44,6 +44,7 @@ h2 {
   margin: 20px 0 35px;
   font-size: 44px;
   line-height: 46px;
+  color: #fff;
 }
 
 h3 {
@@ -121,18 +122,21 @@ h4 {
   -webkit-border-radius: 0;
   border-radius: 0;
   color: #fff;
-  background-color: #6ac48e;
-  box-shadow: inset 0 -1px 0 #56af79;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  -moz-transition: background-color 0.2s ease-in-out;
-  -o-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
+  background-color: #FBB806;
+ 
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+
   -webkit-appearance: none;
 }
-.button:hover {
-  text-decoration: none;
-  color: #fff;
-  background-color: #56af79;
+.button:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .button-buy {
@@ -145,6 +149,50 @@ h4 {
   background: #aa7844 url(../images/icon-buy.png) 11px 50% no-repeat;
   box-shadow: inset 0 -1px 0 #8e5821;
 }
+.perspective {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+}
+
+
+
+.button-price{
+    display: block;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  text-shadow: 1px 1px 2px #000000;
+  white-space: nowrap;
+  color: #FFFFFF;
+  background: #2D4B4C;
+    outline: 1px solid transparent;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.btn-8b:after {
+  width: 100%;
+  height: 70%;
+  left: 0;
+  top: 100%;
+  background: #d61720;
+  -webkit-transform-origin: 0% 0%;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform-origin: 0% 0%;
+  -moz-transform: rotateX(-90deg);
+  -ms-transform-origin: 0% 0%;
+  -ms-transform: rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+}
+.button-price:hover{
+  -webkit-transform: rotateX(15deg);
+  -moz-transform: rotateX(15deg);
+  -ms-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+}
+
 .button-buy:before, .button-buy:after {
   display: none;
   content: '';
@@ -187,8 +235,8 @@ a.button-buy {
   padding-top: 50px;
   text-align: center;
   color: #fff;
-  border-bottom: 1px solid #56af79;
-  background-color: #6ac48e;
+  border-bottom: 1px solid #FBB806;
+  background-color: #2D4B4C;
 }
 .header .section {
   position: relative;
@@ -204,9 +252,9 @@ nav a {
   font-size: 24px;
   line-height: 26px;
   vertical-align: top;
-  border-right: 1px solid #56af79;
+  border-right: 1px solid #FBB806;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: #FBB806;
   box-shadow: 1px 0 0 rgba(255, 255, 255, 0.3);
 }
 nav a:before, nav a:after {
@@ -218,14 +266,10 @@ nav a:before, nav a:after {
   height: 0;
 }
 nav a:before {
-  right: 16px;
-  border-bottom: 16px solid #56af79;
-  border-left: 16px solid #6ac48e;
+  
 }
 nav a:after {
-  right: 0;
-  border-bottom: 16px solid #fff;
-  border-left: 16px solid #89d7a8;
+
 }
 nav a:hover {
   text-decoration: none;
@@ -236,7 +280,7 @@ nav a:hover:after, nav a:hover:before {
   display: block;
 }
 nav a:first-child {
-  border-left: 1px solid #56af79;
+  border-left: 1px solid #FBB806;
   box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.3), 1px 0 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -296,13 +340,10 @@ nav a:first-child {
   line-height: 23px;
 }
 .fixed-header nav a:before {
-  right: 12px;
-  border-bottom-width: 12px;
-  border-left-width: 12px;
+  
 }
 .fixed-header nav a:after {
-  border-bottom-width: 12px;
-  border-left-width: 12px;
+  
 }
 
 /* Push menu */
@@ -504,7 +545,7 @@ nav a:first-child {
 
 .feature-item:hover .thumb i {
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  color: #56af79;
+  color: #fff;
 }
 
 .thumb {
@@ -515,12 +556,12 @@ nav a:first-child {
   height: 108px;
   padding: 16px;
   margin-bottom: 35px;
-  background: url(../images/bg-thumb.png) 0 0 no-repeat;
+  /*background: url(../images/bg-thumb.png) 0 0 no-repeat;*/
 }
 .thumb i {
   font-size: 68px;
   line-height: 108px;
-  color: #6ac48e;
+  color: #FBB806;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
@@ -533,7 +574,7 @@ nav a:first-child {
   padding: 55px 0 100px;
 }
 .team-section .title {
-  color: #6ac48e;
+  color: #FBB806;
 }
 .team-section p {
   font-size: 18px;
@@ -766,7 +807,7 @@ nav a:first-child {
 .gallery-section {
   padding: 70px 0 80px;
   color: #fff;
-  background-color: #6ac48e;
+  background-color: #FBB806;
 }
 .gallery-section figure {
   position: relative;
@@ -907,7 +948,7 @@ nav a:first-child {
 ------------------------------- */
 .pricing-section {
   padding: 120px 0 60px;
-  background-color: #6ac48e;
+  background-color: #FBB806;
 }
 
 .price-item {
@@ -958,11 +999,11 @@ nav a:first-child {
   font: 300 28px/30px "PT Sans Narrow";
   text-transform: uppercase;
   color: #fff;
-  background-color: #6ac48e;
+  background-color: #2D4B4C;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 .price-title:before, .price-title:after {
-  content: '';
+  /*content: '';*/
   position: absolute;
   top: 0;
   right: 0;
@@ -1438,4 +1479,8 @@ nav a:first-child {
 }
 .l-numb{
   font-size: 40pt;
+}
+
+.col-y{
+  color:#FBB806;
 }
