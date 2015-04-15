@@ -13,7 +13,7 @@
     <meta name="description" content="ABR42 landing page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,500' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,300' rel='stylesheet' type='text/css' />
@@ -25,13 +25,13 @@
 
 </head>
 <body class="side-menu-push">
+    <label class="call" for="mail">Заказать звонок</label>
     <!-- Start Header -->
     <header class="header">
         <div class="section clearfix">
-            <span class="logo"><img src="images/logo_1.png" height="100" width="393" alt="Combo" /></span>
+            <span class="logo"><a  href="#home"><img src="images/logo_1.png" height="100" width="393"/></a></span>
             <div id="push-menu"><span>Push</span></div>
             <nav>
-                <a href="#home">Начало</a>
                 <a href="#features">Почему мы</a>
                 <a href="#team">Услуги</a>
                 <a href="#gallery">Работы</a>
@@ -415,7 +415,22 @@
         </section>
     </div>
     <!-- End Contact section -->
+    <input id="mail" type="checkbox" />
+    <div id="popup"> 
+        
+        <form class="call-form" method="post" action="mail.php">
+            <label for="mail" title="Отменить" class="l1">✕</label>
+            <h2 style="margin: 0 0 40px 0;">Обратный звонок</h2>
+            <input class="input-text" name='name' required type="text" placeholder="Ваше имя">
+            <input class="input-text" name='phone' required maxlength="13" type="text" placeholder="Номер телефона">
+            
+            <input class="b1" type='submit' value='Заказать'/>
+        </form>
+        
+    </div>
+    <div class="call-bg" for="mail" style="cursor: pointer;"></div>
 
+    
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
     <script src="js/jquery.flexslider-min.js"></script>
